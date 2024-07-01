@@ -13,12 +13,12 @@ jobs:
     
     strategy:
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
-        node-version: [12.x, 14.x, 16.x]
+        os: [windows-latest, ubuntu-latest]
+        node-version: [10, 12, 14]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
         exclude:
-          - os: macos-latest
-            node-version: [14.x, 16.x]
+          - os: windows-latest
+            node-version: 16
 
     steps:
     - uses: actions/checkout@v2
